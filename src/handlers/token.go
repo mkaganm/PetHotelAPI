@@ -20,7 +20,7 @@ func GetToken(w http.ResponseWriter, r *http.Request) {
 
 	if r.Header["X-Api-Key"] != nil {
 
-		if auth.CheckPasswordHash(r.Header["X-Api-Key"][0]) {
+		if auth.CheckAPIKey(r.Header["X-Api-Key"][0]) {
 
 			token, err := CreateToken()
 			errors.CheckErr(err)
