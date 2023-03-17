@@ -14,7 +14,7 @@ type MySQL struct {
 
 func GetMySQLProperties() *MySQL {
 
-	yamlFile, err := ioutil.ReadFile("src/resources/mysql.yaml")
+	yamlFile, err := ioutil.ReadFile("resources/mysql.yaml")
 	errors.CheckErr(err)
 
 	data := &MySQL{}
@@ -35,7 +35,7 @@ type Postgres struct {
 }
 
 func GetPostgresData() *Postgres {
-	yamlFile, err := ioutil.ReadFile("src/resources/postgresql.yaml")
+	yamlFile, err := ioutil.ReadFile("resources/postgresql.yaml")
 	errors.CheckErr(err)
 
 	data := &Postgres{}
