@@ -11,12 +11,15 @@ type User struct {
 }
 
 func (u User) CheckRegisterRequest() bool {
-	if u.Username == "" ||
+
+	condition := u.Username == "" ||
 		u.UserPassword == "" ||
 		u.UserEmail == "" ||
 		u.FirstName == "" ||
 		u.LastName == "" ||
-		u.PhoneNumber == "" {
+		u.PhoneNumber == ""
+
+	if condition {
 		return false
 	} else {
 		return true
